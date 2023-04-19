@@ -1,13 +1,9 @@
 require "application_system_test_case"
 
 class QuotesTest < ApplicationSystemTestCase
-  # test "visiting the index" do
-  #   visit quotes_url
-  #
-  #   assert_selector "h1", text: "Quotes"
-  # end
-  
+
   setup do
+    login_as users(:accountant)
     @quote = Quote.ordered.first
   end
 
